@@ -1,5 +1,21 @@
 import random
 
+class info() :
+    def __init__(self) -> None:
+        pass
+
+class diceGame() :
+    def __init__(self) -> None:
+        pass
+
+class primeGame() :
+    def __init__(self) -> None:
+        pass
+
+class lastGame() :
+    def __init__(self) -> None:
+        pass    
+
 def player_info_sorting (players) :
     print("참가자 명단: ")
     x = 0
