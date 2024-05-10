@@ -1,8 +1,8 @@
 import random
 
 # 게임 스타터
-def game_starter(infomation) :
-    input_value = input(infomation)
+def game_starter(information) :
+    input_value = input(information)
     if input_value == "" :
         return True
 
@@ -107,6 +107,11 @@ if __name__ == '__main__' :
 
     users = (len(players_names))
     random_number = random.sample(range(1,users+1),users)
-    dictionary = dict(zip(random_number , players_names))
+
+    dictionary = {}
+    for i in range(0, users) :
+        dictionary[random_number[i]] = players_names[i]
+
+    # dictionary = dict(zip(random_number , players_names))
 
     main()

@@ -84,6 +84,25 @@ import numpy as np
 # b = MoreFourCal(2, 8)
 # print(b.pow())
 
-a = np.array(range(1, 11)) + np.array(range(10, 101, 10))
-print(a.shape)
-print(a.size)
+# a = np.array(range(1, 11)) + np.array(range(10, 101, 10))
+# print(a.shape)
+# print(a.size)
+
+def choice_number__(number,key2):
+    global dic_List
+    if number!=1 and number!=2 :
+        print("메뉴에서 고르세요.")
+        choice_number2=int(input("1과 2 중에 선택하세요.:"))
+        choice_number__(choice_number2,key2)
+    elif number==1:
+        for i in key2:
+            for j in range(2,len(key)+1):
+                if i%j==0:
+                    del dic_List[i]
+    elif number==2:
+        for i in key2:
+            for j in range(2,len(key)+1):
+                if i%j!=0:
+                    del dic_List[i]
+
+choice_number__()
