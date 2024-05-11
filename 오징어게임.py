@@ -108,10 +108,13 @@ if __name__ == '__main__' :
     users = (len(players_names))
     random_number = random.sample(range(1,users+1),users)
 
+    # 딕셔너리 생성 구문
     dictionary = {}
     for i in range(0, users) :
         dictionary[random_number[i]] = players_names[i] 
     # dictionary = dict(zip(random_number , players_names))
 
+    # 딕셔너리를 순서대로 정렬
     dictionary = dict(sorted(dictionary.items()))
+
     main()
