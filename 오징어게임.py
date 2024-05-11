@@ -9,7 +9,7 @@ def game_starter(information) :
 # 플레이어 명단 정렬
 def player_info_sorting (players) :
     print("참가자 명단: ")
-    x = 0
+    x = 0  
     for key,value in players.items() :
         # print문의 기본적인 end = enter => end = \t으로 지정하여 줄바꿈을 탭으로 변경
         if key > 9 :
@@ -110,8 +110,8 @@ if __name__ == '__main__' :
 
     dictionary = {}
     for i in range(0, users) :
-        dictionary[random_number[i]] = players_names[i]
-
+        dictionary[random_number[i]] = players_names[i] 
     # dictionary = dict(zip(random_number , players_names))
 
+    dictionary = dict(sorted(dictionary.items()))
     main()
